@@ -9,9 +9,7 @@ generateButton.addEventListener('click', writePassword);
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
 
 // generate password prompts
@@ -40,41 +38,34 @@ function generatePassword() {
     getNumbers: function() {
       return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
     },
-
     getLowerCases: function() {
       return String.fromCharCode(Math.floor(Math.random() * 26 + 97));
     },
-
     getUpperCases: function() {
       return String.fromCharCode(Math.floor(Math.random() * 26 + 65));
     },
-
     getSpecialCharacters: function() {
       return specialCharacters[Math.floor(Math.random() * specialCharacters.length)]
     }
 };
 
   // check all variables
-
   if (numbers === true) {
     minimumNumbers = functionArray.getNumbers();
     minimumCount++;
   }
-
   if (lowerCases === true) {
     minimumLowerCases = functionArray.getLowerCases();
     minimumCount++;
   }
-
   if (upperCases === true) {
     minimumUpperCases = functionArray.getUpperCases();
     minimumCount++;
   }
-
   if (special === true) {
     minimumSpecialCharacters = functionArray.getSpecialCharacters();
     minimumCount++;
-  }
+  } //genearte random password variable
   var randomPasswordGenerated = "";
 
   // password character generator 
